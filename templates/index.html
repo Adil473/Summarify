@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Summarify</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        </head>
+<body>
+
+    <nav>
+        <ul>
+            <li class="brand" style="font-size:50px ;font-family:Times New Roman; white-space:pre-wrap"><img src="{% static 'logo.png' %}" alt="Summarfy" width="80px"> Summarify</li>
+            <!--<li>Home</li>
+            <li>About</li>-->
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="songList">
+            <h1>Video Summary</h1>
+            <br>
+            <form action="ytsummarize">
+                <label for="fname">ENTER THE URL OF THE VIDEO TO BE SUMMARISED:</label><br>
+                <br><input type="text" id="fname" name="video_url" placeholder="Url...." style="font-size:18px ;font-family:Times New Roman; white-space:pre-wrap"> <br>                
+                <br><input type="submit" value="SUMMARIFY" id="btn-yt-summary" style="height:30px; width:150px; font-size: 20px; border: 2px solid #070707;" >
+            </form>
+
+                <br><img src="{% static 'first.jpg' %}" width="330" height="243" alt="Klematis">
+                
+                <div>
+                {% block content %}
+                
+                {% endblock %}
+                </div>
+            
+                <br><br><br><h1>ARTICLE Summary</h1>
+            <form action="article_summary">
+                <br><label for="fname">ENTER THE ARTICLE TO BE SUMMARISED:</label></label>
+                <br><br><textarea rows="8" cols="65" name="article" placeholder="Enter your article..." style="font-size:18px ;font-family:Times New Roman; white-space:pre-wrap">
+                </textarea><br>
+                <br><input type="submit" value="SUMMARIFY" id="btn-art-summary" style="height:30px; width:150px; font-size: 20px; border: 2px solid #070707;">           
+            </form>
+                <br><img src="{% static 'second.png' %}" width="330" height="243" alt="Klematis"><br>
+                <div>
+                    {% block textsum %}
+
+                    {% endblock %}
+                </div>
+        </div>
+    </div>
+        <div class="songBanner"></div>
+    </div>
+    <form action="" method="get"></form>
+    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+      
+</body>
+</html>

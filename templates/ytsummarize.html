@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summaryYT</title>
+</head>
+
+<body>
+    {% extends 'index.html' %}
+
+    {% block content %}
+    <!--<iframe width="x" height="y" src="{{vid_url_display}}" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    <br><div class="div2" style="font-size: 18px;"> SUMMARY </div>
+    <textarea rows="7" cols="65" style="font-size: 18px ;font-family:Times New Roman;white-space:pre-wrap">
+    {{vid_url}}
+    </textarea>
+    {% endblock %}
+</body>
+
+</html>
